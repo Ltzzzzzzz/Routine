@@ -100,7 +100,5 @@ namespace Routine.Api.Controllers
             await _companyRepository.SaveAsync();
             return NoContent();
         }
-
-
     }
 }
