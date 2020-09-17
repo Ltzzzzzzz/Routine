@@ -21,6 +21,8 @@ namespace Routine.Api.Profiles
                     opt => opt.MapFrom(src => GetAge(src.DateOfBirth)));
 
             CreateMap<EmployeeAddDto, Employee>();
+
+            CreateMap<EmployeeUpdateDto, Employee>();
         }
 
         private int GetAge(DateTime birthDate)

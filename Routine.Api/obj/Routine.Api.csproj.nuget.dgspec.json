@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "F:\\c#Test\\Routine\\Routine.Api\\Routine.Api.csproj": {}
+    "F:\\github\\Routine\\Routine.Api\\Routine.Api.csproj": {}
   },
   "projects": {
-    "F:\\c#Test\\Routine\\Routine.Api\\Routine.Api.csproj": {
+    "F:\\github\\Routine\\Routine.Api\\Routine.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\c#Test\\Routine\\Routine.Api\\Routine.Api.csproj",
+        "projectUniqueName": "F:\\github\\Routine\\Routine.Api\\Routine.Api.csproj",
         "projectName": "Routine.Api",
-        "projectPath": "F:\\c#Test\\Routine\\Routine.Api\\Routine.Api.csproj",
+        "projectPath": "F:\\github\\Routine\\Routine.Api\\Routine.Api.csproj",
         "packagesPath": "C:\\Users\\49523\\.nuget\\packages\\",
-        "outputPath": "F:\\c#Test\\Routine\\Routine.Api\\obj\\",
+        "outputPath": "F:\\github\\Routine\\Routine.Api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\49523\\AppData\\Roaming\\NuGet\\NuGet.Config",
