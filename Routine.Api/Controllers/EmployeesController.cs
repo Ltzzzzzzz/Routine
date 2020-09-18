@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using AutoMapper;
+using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 using Routine.Api.Entities;
 using Routine.Api.Models;
@@ -101,5 +102,67 @@ namespace Routine.Api.Controllers
             return NoContent();
         }
 
+        [HttpPatch("{employeeId}")]
+        public async Task<IActionResult> PartiallyUpdateEmployeeForCompanyAsync(
+            Guid companyId,
+            Guid employeeId,
+            JsonPatchDocument<EmployeeUpdateDto> pathDocument)
+        {
+            if (!await _companyRepository.CompanyExistsAsync(companyId))
+            {
+                return NotFound();
+            }
+
+            var employeeEntity = await _companyRepository.GetEmployeeAsync(companyId, employeeId);
+            if (employeeEntity == null)
+            {
+                var employeeDto = new EmployeeUpdateDto();
+                pathDocument.ApplyTo(employeeDto, ModelState);
+                if (!TryValidateModel(employeeDto))
+                {
+                    return ValidationProblem(ModelState);
+                }
+
+                var employeeToAdd = _mapper.Map<Employee>(employeeDto);
+                employeeToAdd.Id = employeeId;
+                _companyRepository.AddEmployee(companyId, employeeToAdd);
+                await _companyRepository.SaveAsync();
+
+                var returnDto = _mapper.Map<EmployeeDto>(employeeToAdd);
+                return CreatedAtAction(nameof(GetEmployeeAsync), new { companyId, employeeId }, returnDto);
+            }
+
+            var dtoToPatch = _mapper.Map<EmployeeUpdateDto>(employeeEntity);
+            // 需要处理验证错误
+            pathDocument.ApplyTo(dtoToPatch, ModelState);
+
+            if (!TryValidateModel(dtoToPatch))
+            {
+                return ValidationProblem(ModelState);
+            }
+            _mapper.Map(dtoToPatch, employeeEntity);
+            _companyRepository.UpdateEmployee(employeeEntity);
+            await _companyRepository.SaveAsync();
+            return NoContent();
+        }
+
+        [HttpDelete("{employeeId}")]
+        public async Task<IActionResult> DeleteEmployeeForCompanyAsync(Guid companyId, Guid employeeId)
+        {
+            if (!await _companyRepository.CompanyExistsAsync(companyId))
+            {
+                return NotFound();
+            }
+
+            var employeeEntity = await _companyRepository.GetEmployeeAsync(companyId, employeeId);
+            if (employeeEntity == null)
+            {
+                return NotFound();
+            }
+
+            _companyRepository.DeleteEmployee(employeeEntity);
+            await _companyRepository.SaveAsync();
+            return NoContent();
+        }
     }
 }
