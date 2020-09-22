@@ -7,6 +7,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization;
 using Routine.Api.Data;
 using Routine.Api.Services;
 
@@ -26,8 +28,10 @@ namespace Routine.Api
             services.AddControllers(setup =>
             {
                 setup.ReturnHttpNotAcceptable = true; // 返回状态码406
-            }).AddXmlDataContractSerializerFormatters(); // accept xml
-
+            }).AddNewtonsoftJson(setup =>
+            {
+                setup.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
+            }).AddXmlDataContractSerializerFormatters(); // accept xml，有默认排序，默认优先application/json格式，然后再按设置的排序
             // 实体键值映射
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 

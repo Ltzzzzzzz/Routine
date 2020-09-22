@@ -36,7 +36,8 @@ namespace Routine.Api.Services
                 parameters.Introduction = parameters.Introduction.Trim();
                 companies = companies.Where(c => c.Introduction.Contains(parameters.Introduction));
             }
-
+            // 分页
+            companies = companies.Skip(parameters.PageSize * (parameters.PageSize - 1)).Take(parameters.PageSize);
             return await companies.ToListAsync();
         }
 

@@ -24,7 +24,7 @@ namespace Routine.Api.Data
                 .WithMany(x => x.Employees)
                 .HasForeignKey(x => x.CompanyId) // 外键
                 .HasPrincipalKey(x => x.Id) 
-                .OnDelete(DeleteBehavior.Restrict);
+                .OnDelete(DeleteBehavior.Cascade); // 级联删除
 
             modelBuilder.Entity<Company>().HasData(
                 new Company

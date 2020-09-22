@@ -115,8 +115,6 @@ F:\github\Routine\Routine.Api\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstanda
 F:\github\Routine\Routine.Api\obj\Debug\netcoreapp3.1\Routine.Api.csprojAssemblyReference.cache
 F:\github\Routine\Routine.Api\obj\Debug\netcoreapp3.1\Routine.Api.AssemblyInfoInputs.cache
 F:\github\Routine\Routine.Api\obj\Debug\netcoreapp3.1\Routine.Api.AssemblyInfo.cs
-F:\github\Routine\Routine.Api\obj\Debug\netcoreapp3.1\Routine.Api.csproj.CoreCompileInputs.cache
-F:\github\Routine\Routine.Api\obj\Debug\netcoreapp3.1\Routine.Api.MvcApplicationPartsAssemblyInfo.cache
 F:\github\Routine\Routine.Api\obj\Debug\netcoreapp3.1\Routine.Api.RazorTargetAssemblyInfo.cache
 F:\github\Routine\Routine.Api\obj\Debug\netcoreapp3.1\Routine.Api.csproj.CopyComplete
 F:\github\Routine\Routine.Api\obj\Debug\netcoreapp3.1\staticwebassets\Routine.Api.StaticWebAssets.Manifest.cache
@@ -124,3 +122,8 @@ F:\github\Routine\Routine.Api\obj\Debug\netcoreapp3.1\staticwebassets\Routine.Ap
 F:\github\Routine\Routine.Api\obj\Debug\netcoreapp3.1\Routine.Api.dll
 F:\github\Routine\Routine.Api\obj\Debug\netcoreapp3.1\Routine.Api.pdb
 F:\github\Routine\Routine.Api\obj\Debug\netcoreapp3.1\Routine.Api.genruntimeconfig.cache
+F:\github\Routine\Routine.Api\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
+F:\github\Routine\Routine.Api\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+F:\github\Routine\Routine.Api\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
+F:\github\Routine\Routine.Api\obj\Debug\netcoreapp3.1\Routine.Api.csproj.CoreCompileInputs.cache
+F:\github\Routine\Routine.Api\obj\Debug\netcoreapp3.1\Routine.Api.MvcApplicationPartsAssemblyInfo.cache
