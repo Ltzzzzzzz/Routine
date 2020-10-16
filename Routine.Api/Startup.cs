@@ -7,7 +7,6 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 using Routine.Api.Data;
 using Routine.Api.Services;
@@ -27,15 +26,15 @@ namespace Routine.Api
         {
             services.AddControllers(setup =>
             {
-                setup.ReturnHttpNotAcceptable = true; // ·µ»Ø×´Ì¬Âë406
+                setup.ReturnHttpNotAcceptable = true; // è¿”å›çŠ¶æ€ç 406
             }).AddNewtonsoftJson(setup =>
             {
                 setup.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
-            }).AddXmlDataContractSerializerFormatters(); // accept xml£¬ÓĞÄ¬ÈÏÅÅĞò£¬Ä¬ÈÏÓÅÏÈapplication/json¸ñÊ½£¬È»ºóÔÙ°´ÉèÖÃµÄÅÅĞò
-            // ÊµÌå¼üÖµÓ³Éä
+            }).AddXmlDataContractSerializerFormatters(); //accept xmlï¼Œæœ‰é»˜è®¤æ’åºï¼Œé»˜è®¤ä¼˜å…ˆapplication/jsonæ ¼å¼ï¼Œç„¶åå†æŒ‰è®¾ç½®çš„æ’åº
+            // å®ä½“é”®å€¼æ˜ å°„
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
-            // Ã¿´ÎHttpÇëÇó
+            // å®ä½“é”®å€¼æ˜ å°„
             services.AddScoped<ICompanyRepository, CompanyRepository>();
 
             services.AddDbContext<RoutineDbContext>(options =>

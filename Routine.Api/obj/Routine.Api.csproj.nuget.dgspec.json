@@ -1,29 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "F:\\github\\Routine\\Routine.Api\\Routine.Api.csproj": {}
+    "/Users/ltzzzzzzz/Desktop/github/Routine/Routine.Api/Routine.Api.csproj": {}
   },
   "projects": {
-    "F:\\github\\Routine\\Routine.Api\\Routine.Api.csproj": {
+    "/Users/ltzzzzzzz/Desktop/github/Routine/Routine.Api/Routine.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\github\\Routine\\Routine.Api\\Routine.Api.csproj",
+        "projectUniqueName": "/Users/ltzzzzzzz/Desktop/github/Routine/Routine.Api/Routine.Api.csproj",
         "projectName": "Routine.Api",
-        "projectPath": "F:\\github\\Routine\\Routine.Api\\Routine.Api.csproj",
-        "packagesPath": "C:\\Users\\49523\\.nuget\\packages\\",
-        "outputPath": "F:\\github\\Routine\\Routine.Api\\obj\\",
+        "projectPath": "/Users/ltzzzzzzz/Desktop/github/Routine/Routine.Api/Routine.Api.csproj",
+        "packagesPath": "/Users/ltzzzzzzz/.nuget/packages/",
+        "outputPath": "/Users/ltzzzzzzz/Desktop/github/Routine/Routine.Api/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\49523\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/ltzzzzzzz/.config/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {},
-          "https://nuget.cnblogs.com/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
@@ -41,21 +38,21 @@
           "dependencies": {
             "AutoMapper.Extensions.Microsoft.DependencyInjection": {
               "target": "Package",
-              "version": "[8.0.1, )"
+              "version": "[8.1.0, )"
             },
             "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
               "target": "Package",
-              "version": "[3.1.8, )"
+              "version": "[3.1.9, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[3.1.8, )"
+              "version": "[3.1.9, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[3.1.8, )"
+              "version": "[3.1.9, )"
             }
           },
           "imports": [
@@ -76,7 +73,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.402/RuntimeIdentifierGraph.json"
         }
       }
     }

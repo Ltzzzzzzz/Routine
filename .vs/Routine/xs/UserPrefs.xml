@@ -1,0 +1,27 @@
+﻿<Properties StartupConfiguration="{A6CF25A2-C684-4F87-9B6B-9647F5BA41CF}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Routine.Api/DtoParameters/CompanyDtoParameters.cs">
+    <Files>
+      <File FileName="Routine.Api/DtoParameters/CompanyDtoParameters.cs" Line="16" Column="2" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Routine" expanded="True">
+            <Node name="Routine.Api" expanded="True">
+              <Node name="DtoParameters" expanded="True">
+                <Node name="CompanyDtoParameters.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Routine.Api PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
